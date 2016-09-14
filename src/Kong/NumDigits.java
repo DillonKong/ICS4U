@@ -1,8 +1,9 @@
 package Kong;
 
 import java.util.Scanner;
-/*Dillon Kong
+/* Dillon Kong
  * NumDigits (Exercise 4)
+ * Counts the number digits from the number inputed by the user
  * 13/9/16
  */
 public class NumDigits {
@@ -16,18 +17,18 @@ public class NumDigits {
 		
 		System.out.println(NumDigit(number));//Prints what the method returns
 	}
-	public static int NumDigit(int x)//Figures out how many digits in the number inputted
+	public static int NumDigit(int x)//Figures out how many digits in the number inputed
 	{
 		if (x == 0)
 		{
-			return 1;
+			return 1;//0 has one digit
 		}
-		else 
+		else // For any other number besides 0
 		{
-		 tally ++;
-		 NumDigit(x/10);
+		 tally ++; //Counts the number of digits in the number
+		 NumDigit(x/10); //Breaks down the number by 10
 		}
-		return tally;
+		return tally; // Return the to main method
 	}
 
 }
