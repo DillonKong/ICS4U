@@ -2,8 +2,8 @@ package Kong;
 
 import java.util.Scanner;
 /* Dillon Kong
- * NumDigits (Exercise 4)
- * Counts the number digits from the number inputed by the user
+ * NumDigits 
+ * (Exercise 4) Counts the number digits from the number inputed by the user
  * 13/9/16
  */
 public class NumDigits {
