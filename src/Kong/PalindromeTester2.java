@@ -20,7 +20,18 @@ public class PalindromeTester2 {
 			String one = scan.nextLine();
 			String another;
 			String wordBackwards;
+			/*int space;
+			String space1;
 
+			for (int i = 0; i < one.length()- 1; i ++)
+			{
+				if ((one.charAt(i)) == (' '))
+				{
+					 space = one.get(i).getText();
+					 space1 = space.trim();
+				}
+			}*/
+			
 			wordBackwards = isReverse(one);
 
 			if (wordBackwards.equalsIgnoreCase(one))
