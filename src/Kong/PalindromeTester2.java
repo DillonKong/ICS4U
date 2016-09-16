@@ -20,6 +20,7 @@ public class PalindromeTester2 {
 			String one = scan.nextLine();
 			String another;
 			String wordBackwards;
+				
 			/*int space;
 			String space1;
 

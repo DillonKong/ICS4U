@@ -1,3 +1,4 @@
+package Kong;
 //******************************************************************
 //  PalidromeTester.java              Author: Lewis/Loftus/Cocking
 //

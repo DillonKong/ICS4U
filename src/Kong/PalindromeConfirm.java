@@ -1,7 +1,11 @@
 package Kong;
 
 import java.util.Scanner;
-
+/*Dillon Kong
+ * PalindromeConfrim
+ * User inputs two strings and programs compares them to check if they're palindromes of each other.S
+ * 15/9/16
+ */
 public class PalindromeConfirm {
 
 	public static void main(String[] args) {
