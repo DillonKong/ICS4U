@@ -2,7 +2,7 @@ package Kong;
 
 import java.util.Scanner;
 
-public class PalidromeConfirm {
+public class PalindromeConfirm {
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
