@@ -3,7 +3,7 @@ package Kong;
 import java.util.Scanner;
 /*Dillon Kong
  * PalindromeConfrim
- * User inputs two strings and programs compares them to check if they're palindromes of each other.S
+ * User inputs two strings and programs compares them to check if they're palindromes of each other. Prints TRUE or FALSE depending of the answer.
  * 15/9/16
  */
 public class PalindromeConfirm {
@@ -14,13 +14,18 @@ public class PalindromeConfirm {
 		String one = scan.nextLine(), two = scan.nextLine();
 		String wordBackwards = isReverse(one);
 		
-		if (wordBackwards.equalsIgnoreCase(two))
+		if (wordBackwards.equalsIgnoreCase(two))//Compares the two strings
 			System.out.println("True");
 		else
 			System.out.println("False");
 		
 	}
-	public static String isReverse (String x)
+	/** 
+	 * Reverse the first word so it can be compared to the second.
+	 * @param x
+	 * @return
+	 */
+	public static String isReverse (String x) 
 	{
 		char backwards = x.charAt(x.length()-1);
         if(x.length() == 1) 

@@ -13,31 +13,20 @@ public class PalindromeTester2 {
 		Scanner scan = new Scanner (System.in);
 		boolean  again = true;
 
-		while(again == true)
+		while(again == true)// Continues to repeat as long as the user has a another possible palindrome.
 		{
 			System.out.println("Please input potential palindrome.");
 
-			String one = scan.nextLine();
+			String reverse = scan.nextLine();// Takes in possible palindrome
 			String another;
 			String wordBackwards;
-				
-			/*int space;
-			String space1;
-
-			for (int i = 0; i < one.length()- 1; i ++)
-			{
-				if ((one.charAt(i)) == (' '))
-				{
-					 space = one.get(i).getText();
-					 space1 = space.trim();
-				}
-			}*/
 			
-			wordBackwards = isReverse(one);
+			
+			wordBackwards = isReverse(reverse);
 
-			if (wordBackwards.equalsIgnoreCase(one))
+			if (wordBackwards.equalsIgnoreCase(reverse))// compares the original word and it reversed. Outputs whether it is a possible palindrome
 			{
-				System.out.println("This word IS a possible palindrome.\n Test another palindrome. y/n?");
+				System.out.println("This word IS a possible palindrome.\n Test another palindrome. y/n?");//asks user if they want to try another possible palindrome
 				another = scan.nextLine();
 				if (another.equalsIgnoreCase("y"))
 				{
@@ -48,7 +37,7 @@ public class PalindromeTester2 {
 			}
 			else
 			{
-				System.out.println("This IS Not a possible palindrome \n Test another palindrome. y/n?");
+				System.out.println("This IS Not a possible palindrome \n Test another palindrome. y/n?");//asks user if they want to try another possible palindrome
 				another = scan.nextLine();
 				if (another.equalsIgnoreCase("y"))
 				{
@@ -59,7 +48,11 @@ public class PalindromeTester2 {
 			}
 		}
 	}
-	
+	/**
+	 * reverses the inputed word, so that it can be compared to itself
+	 * @param x
+	 * @return
+	 */
 	public static String isReverse (String x)
 	{
 		char backwards = x.charAt(x.length()-1);

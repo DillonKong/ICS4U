@@ -17,7 +17,12 @@ public class NumDigits {
 		
 		System.out.println(NumDigit(number));//Prints what the method returns
 	}
-	public static int NumDigit(int x)//Figures out how many digits in the number inputed
+	/**
+	 * Figures out how many digits in the number inputed
+	 * @param x
+	 * @return
+	 */
+	public static int NumDigit(int x)
 	{
 		if (x == 0)
 		{

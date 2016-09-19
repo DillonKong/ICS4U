@@ -10,7 +10,10 @@ public class starRecursion {
 		int num = scan.nextInt();
 		starString(num);
 	}
-
+/**
+ * Prints the *'s
+ * @param x
+ */
 	public static void starString (int x)
 	{
 		if (x == 0)

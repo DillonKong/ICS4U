@@ -1,7 +1,10 @@
 package Kong;
 
 public class Recursion {
-
+/**
+ * Shows what a recursion runs through
+ * @param num
+ */
 	public static void showRecursion(int num) {
 		System.out.println("Entering method. num = " + num);
 		if (num > 1)
