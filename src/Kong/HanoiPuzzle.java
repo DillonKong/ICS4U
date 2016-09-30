@@ -18,7 +18,7 @@ public class HanoiPuzzle {
 	/**
 	 * Method that solves the hanoi puzzle and prints the moves
 	 * @param num aka number of disks
-	 * @param src Sender
+	 * @param src Sender	
 	 * @param aux Nothing
 	 * @param dst Receiver
 	 */

@@ -8,13 +8,13 @@ import java.util.Scanner;
  */
 public class NumDigits {
 	public static int tally = 0;//Counter to count the number of digits in the input
-	
+
 	public static void main(String[] args) {
-		
+
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);//Scanner for user input
 		int number = scan.nextInt();
-		
+
 		System.out.println(NumDigit(number));//Prints what the method returns
 	}
 	/**
@@ -30,8 +30,8 @@ public class NumDigits {
 		}
 		else // For any other number besides 0
 		{
-		 tally ++; //Counts the number of digits in the number
-		 NumDigit(x/10); //Breaks down the number by 10
+			tally ++; //Counts the number of digits in the number
+			NumDigit(x/10); //Breaks down the number by 10
 		}
 		return tally; // Return the to main method
 	}
