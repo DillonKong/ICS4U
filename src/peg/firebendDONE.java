@@ -1,9 +1,9 @@
 package peg;
-
+//DONE
 //firebender
 import java.util.Scanner;
 
-public class firebend {
+public class firebendDONE {
 
 	public static void main(String[] args) {
 

@@ -17,7 +17,7 @@ public class PalindromeTester2 {
 		{
 			System.out.println("Please input potential palindrome.");
 
-			String reverse = scan.nextLine();// Takes in possible palindrome
+			String reverse = scan.nextLine();// Takes in possible palindrome	
 			String another;
 			String wordBackwards;
 			

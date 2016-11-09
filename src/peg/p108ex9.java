@@ -12,7 +12,7 @@ public class p108ex9 {
 		int t = scan.nextInt();
 		double wage = 0, hours = 0.00, taxT = 0.00, donateT = 0.00;
 		String tax = null, donate = null; 
-		double [] total = new double 
+		//double [] total = new double 
 		for (int i = 0; i < t; i ++)
 		{
 			wage = scan.nextDouble();
@@ -36,12 +36,12 @@ public class p108ex9 {
 			else
 				donateT = 0;
 
-			total [i] = (wage * hours * taxT) + donateT;
+			//total [i] = (wage * hours * taxT) + donateT;
 		}
 		for (int x = 0; x < t; x ++)
 		{
 
-			System.out.println (df.format(total [x]));
+			//System.out.println (df.format(total [x]));
 		}
 
 
