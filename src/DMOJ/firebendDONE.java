@@ -1,4 +1,4 @@
-package peg;
+package DMOJ;
 //DONE
 //firebender
 import java.util.Scanner;

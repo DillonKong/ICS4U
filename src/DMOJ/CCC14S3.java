@@ -1,3 +1,4 @@
+package DMOJ;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -14,7 +15,7 @@ public class CCC14S3 {
 			int n = scan.nextInt();
 			int c = 1;
 
-			Stack <Integer> mountain = new Stack<Integer>();
+			Stack <Integer> mountain = new Stack<Integer>();	
 			Stack <Integer>branch = new Stack<Integer>();
 
 			for (int j = 0; j < n; j ++)
