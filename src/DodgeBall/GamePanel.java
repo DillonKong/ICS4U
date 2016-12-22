@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -26,16 +27,13 @@ public class GamePanel extends JPanel implements Runnable, MouseMotionListener
 {
 	int mouseX = 0, mouseY = 0;
 	int lives = 3;
-	int width = 1900;
-	int height = 950;
-	int numBalls = 50;
+	int width = 1900, height = 950;
+	int numBalls = 45;
 	final int pauseDuration = 0;
 
 	FlashingBall[] ball = new FlashingBall[numBalls];
-
-
+	
 	public static void main(String[] args) {
-
 		// Set up main window (using Swing's Jframe)
 		JFrame frame = new JFrame("Dodgeball");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -74,9 +72,9 @@ public class GamePanel extends JPanel implements Runnable, MouseMotionListener
 		{
 			this.requestFocus();
 			updateLives(getGraphics());
+
 			for (int i = 0; i < ball.length; i++) 
 			{
-
 				if (checkHit(ball[i])) 
 				{
 					lives --;
@@ -89,7 +87,7 @@ public class GamePanel extends JPanel implements Runnable, MouseMotionListener
 					}
 
 					try {
-						Thread.sleep(1500);
+						Thread.sleep(1250);
 					} catch (InterruptedException e) {
 					}
 
@@ -130,14 +128,12 @@ public class GamePanel extends JPanel implements Runnable, MouseMotionListener
 		{
 			ball[i].draw(g);
 		}
-
 	}
 
 	@Override
 	public void mouseDragged(MouseEvent arg0) 
 	{
 		repaint();
-
 	}
 
 	@Override
@@ -150,25 +146,14 @@ public class GamePanel extends JPanel implements Runnable, MouseMotionListener
 
 	public void updateLives (Graphics g)
 	{
-		if (lives >= 0 )
+		if (lives > 0 )
 		{
 			g.setColor(Color.BLACK);
 			g.setFont(new Font("New Times Roman", 50 , 50));
 			g.drawString("LIVES:", 100, 100);
-
-			if (lives == 3)
-			{
-				g.drawString("3", 250, 100);
-			}
-			else if (lives == 2)
-			{
-				g.drawString("2", 250, 100);
-			}
-			else if (lives == 1)
-			{
-				g.drawString("1", 250, 100);
-			}
+			g.drawString(Integer.toString(lives), 250, 100);
 		}
+
 		else 
 		{
 			this.setBackground(Color.red);
@@ -181,7 +166,5 @@ public class GamePanel extends JPanel implements Runnable, MouseMotionListener
 				ball[i].stopThread();
 			}
 		}
-
 	}
-
 }
