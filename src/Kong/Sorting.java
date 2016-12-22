@@ -20,6 +20,7 @@ public class Sorting {
 					a[j] = a[i];
 					a[i] = temp;
 				}
+				System.out.println();
 			}	
 		}
 		return a;
@@ -235,23 +236,109 @@ public class Sorting {
 		return a;
 	}
 
-	public static int [] quickSorting (int [] a)
+	public static int partition(int array[], int left, int right)
 	{
-		int pivot = a.length - 1;
-		int counter = 0;
-		int temp = 0;
-		
-		for (int j = 0; j < 0; j ++ )
-		{
-			 if (a[j] < pivot)
-			 {
-				 counter ++;
-				 temp = a [j];
-				 a[j] = a[counter];
-				 a[counter] = temp;
-			 }
-		}
-		
+	      int i = left, j = right;
+	      int temp;
+	      int pivot = array[(left + right) / 2];
+	     
+	      while (i <= j) {
+	            while (array[i] < pivot)
+	                  i++;
+	            while (array[j] > pivot)
+	                  j--;
+	            if (i <= j) {
+	                  temp = array[i];
+	                  array[i] = array[j];
+	                  array[j] = temp;
+	                  i++;
+	                  j--;
+	            }
+	      };
+	     
+	      return i;
+	}
+	
+	public static double partition(double array[], double left, double right)
+	{
+	      int i = (int) left,  j = (int) right;
+	      double temp;
+	      double pivot = array[(int) ((left + right) / 2)];
+	     
+	      while (i <= j) {
+	            while (array[i] < pivot)
+	                  i++;
+	            while (array[j] > pivot)
+	                  j--;
+	            if (i <= j) {
+	                  temp = array[i];
+	                  array[i] = array[j];
+	                  array[j] = temp;
+	                  i++;
+	                  j--;
+	            }
+	      };
+	     
+	      return i;
+	}
+	
+	static int partition(String array[], int left, int right)
+	{
+	      int i = left, j = right;
+	      String temp;
+	      String pivot = array[(left + right) / 2];
+	     
+	      while (i <= j) {
+	            while (array[i].compareTo(pivot) > 0)
+	                  i++;
+	            while (array[j].compareTo(pivot)> 0)
+	                  j--;
+	            if (i <= j) {
+	                  temp = array[i];
+	                  array[i] = array[j];
+	                  array[j] = temp;
+	                  i++;
+	                  j--;
+	            }
+	      };
+	     
+	      return i;
+	}
+	public static int[] quickSorting(int array[], int left, int right) {
+	      int index = partition(array, left, right);
+	      if (left < index - 1)
+	      {
+	            quickSorting(array, left, index - 1);
+	      }
+	      if (index < right)
+	      {
+	            quickSorting(array, index, right);
+	      }
+	      return array;
+	}
+	public static double[] quickSorting(double array[], double left, double right) {
+	      double index = partition(array, left, right);
+	      if (left < index - 1)
+	      {
+	            quickSorting(array, left, index - 1);
+	      }
+	      if (index < right)
+	      {
+	            quickSorting(array, index, right);
+	      }
+	      return array;
+	}
+	public static String[] quickSorting(String array[], int left, int right) {
+	      int index = partition(array, left, right);
+	      if (left < index - 1)
+	      {
+	            quickSorting(array, left, index - 1);
+	      }
+	      if (index < right)
+	      {
+	            quickSorting(array, index, right);
+	      }
+	      return array;
 	}
 
 

@@ -14,7 +14,8 @@ public class CCCHK15J1 {
 		int p1Counter = 0;
 		int p2Counter = 0;
 		
-		for (int i = 0; i < t; i++)
+		System.out.println(p1List);
+		for (int i = 0; i < t-1; i++)
 		{
 			if (p1List[i] == "rock" && p2List[i] == "paper")
 			{
@@ -28,6 +29,10 @@ public class CCCHK15J1 {
 			{
 				p1Counter++;
 			}
+			else if (p1List[i] == "paper" && p2List[i] == "scissors")
+			{
+				p2Counter++;
+			}
 			else if (p1List[i] == "rock" && p2List[i] == "scissors")
 			{
 				p2Counter ++;
@@ -36,7 +41,8 @@ public class CCCHK15J1 {
 			{
 				p2Counter++;
 			}
-		}
+		} 	
+		System.out.println(p1Counter + " " + p2Counter);
 		
 		
 	}
